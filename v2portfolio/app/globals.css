@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes rotateBurger {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(90deg);
+	}
+}
+
+.animate-burgerRotate {
+	transform-origin: center;
+}
