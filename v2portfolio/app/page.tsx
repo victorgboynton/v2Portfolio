@@ -22,21 +22,15 @@ function Navbar() {
 				onClick={handleSetIsNavOpen}
 			>
 				{isNavOpen ? (
-					<div className="absolute z-10 flex flex-col">
-						<div className="">
-							<Image
-								src={burgerVert}
-								height={30}
-								width={30}
-								alt="burger"
-								className="animate-rotateBurger"
-							/>
-						</div>
-						<div className="flex flex-col">
+					<div className="bg-black h-[100vh] w-[100vw] text-white flex flex-col pt-[25vh] justify-between">
+						<div className="flex flex-col items-center space-y-10">
 							<a>Home</a>
 							<a>Projects</a>
 							<a>About</a>
 							<a>Contact</a>
+						</div>
+						<div className="bg-gray-950 items-center pt-[5vh]">
+							<button>Close</button>
 						</div>
 					</div>
 				) : (
