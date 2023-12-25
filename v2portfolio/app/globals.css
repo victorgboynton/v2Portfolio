@@ -10,7 +10,19 @@
 		transform: rotate(90deg);
 	}
 }
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: #3b0764;
+}
 
+header.visable {
+	top: 0;
+}
+
+header.hidden {
+	top: -100%;
+}
 .animate-burgerRotate {
 	transform-origin: center;
 }
