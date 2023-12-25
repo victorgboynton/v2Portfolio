@@ -32,7 +32,7 @@ export function Navbar() {
 
 	return (
 		<header
-			className={`fixed top-0 w-full ${
+			className={`fixed top-0 w-full px-5 ${
 				showNav ? "translate-y-0" : "-translate-y-full"
 			} transition-transform duration-300 ease-in-out`}
 		>
