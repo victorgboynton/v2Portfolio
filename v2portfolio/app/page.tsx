@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Home() {
 	return (
 		<main>
-			<h1 className="h-[100vh] mt-[2vh] sm:mt-[5vh] bg-gradient-to-b from-purple-950 to-fuchsia-950 text-white text-[50px] break-words flex items-center ">
+			<h1 className="h-[90vh] mt-[2vh] sm:mt-[5vh] bg-gradient-to-b from-purple-950 to-fuchsia-950 text-white text-[50px] break-words flex items-center ">
 				Full-Stack Web Development, Done Right
 			</h1>
 			<div className="h-[100vh] bg-[#f7f7f7] text-black pt-[10vh] block sm:flex sm:flex-row text-3xl">
