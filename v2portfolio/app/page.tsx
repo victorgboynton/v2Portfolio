@@ -3,26 +3,102 @@ import { Navbar } from "./Navbar";
 import me from "/public/picOfMe.jpg";
 import Image from "next/image";
 
+const hardSkills = [
+  { id: 1, name: "HTML/CSS" },
+  { id: 2, name: "JavaScript" },
+  { id: 3, name: "React" },
+  { id: 4, name: "Python" },
+  { id: 5, name: "C#" },
+  { id: 6, name: "C++" },
+  { id: 7, name: "MongoDB" },
+  { id: 8, name: "SQL" },
+];
+const softSkills = [
+  { id: 1, name: "Communication" },
+  { id: 2, name: "Teamwork" },
+  { id: 3, name: "Problem-solving" },
+  { id: 4, name: "Leadership" },
+  { id: 5, name: "Adaptability" },
+  { id: 6, name: "Creativity" },
+  { id: 7, name: "Work Ethic" },
+  { id: 8, name: "Interpersonal Skills" },
+  { id: 9, name: "Time Management" },
+  { id: 10, name: "EQ" },
+];
+type skill = {
+  id: number;
+  name: string;
+};
 export default function Home() {
-	return (
-		<main>
-			<h1 className="h-[90vh] mt-[2vh] sm:mt-[5vh] bg-gradient-to-b from-purple-950 to-fuchsia-950 text-white text-[50px] break-words flex items-center ">
-				Full-Stack Web Development, Done Right
-			</h1>
-			<div className="h-[100vh] bg-[#f7f7f7] text-black pt-[10vh] block sm:flex sm:flex-row text-3xl">
-				<div className="items-center">
-					I am a new developer, trying to show off my skills. I hope that this
-					website will give you a little taste of what I know how to do!
-				</div>
-				<Image
-					src={me}
-					alt="Picture of Me"
-					height={300}
-					width={600}
-					className="sm:h-[800px] border-2 border-black my-5"
-				/>
-			</div>
-			<div className="h-[100vh] bg-[#f0f0f0]">What I know how to do:</div>
-		</main>
-	);
+  return (
+    <main className="flex flex-col font-robotoSlab">
+      <h1 className="h-[94vh] mt-[2vh] sm:mt-[5vh] bg-gradient-to-b from-purple-950 to-fuchsia-950 text-white text-[50px] break-words flex items-center ">
+        Full-Stack Web Development, Done Right
+      </h1>
+      <div className=" bg-[#f7f7f7] text-black pt-[10vh] block sm:flex sm:flex-row text-xl">
+        <div className="text-center underline text-2xl mb-1">
+          Why I made this:
+        </div>
+        <div className="items-center">
+          I am a new developer, trying to show off my skills. I hope that this
+          website will give you a little taste of what I know how to do!
+        </div>
+        <Image
+          src={me}
+          alt="Picture of Me"
+          height={300}
+          width={600}
+          className="sm:h-[800px] border-2 border-black my-5"
+        />
+      </div>
+      <div className="h-[100vh] bg-[#dfdfdf]">
+        <div className="text-3xl">What I know:</div>
+        <div className="flex flex-col">
+          <div>Hard Skills: </div>
+          <div className="flex flex-row flex-wrap">
+            {hardSkills.map((hardSkill: skill) => (
+              <p
+                key={hardSkill.id}
+                className="border-2 font-robotoMono border-purple-950 p-1 m-1 bg-purple-200 rounded-[2.5em]"
+              >
+                {hardSkill.name}
+              </p>
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <div>Soft Skills: </div>
+          <div className="flex flex-row flex-wrap">
+            {softSkills.map((softSkill: skill) => (
+              <p
+                key={softSkill.id}
+                className="border-2 border-purple-950 p-1 m-1 bg-purple-200 rounded-[2.5em]"
+              >
+                {softSkill.name}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="h-[100vh] bg-[#f7f7f7] w-[100vw]">
+        <div className="text-center text-3xl underline mb-1">Who am I?</div>
+        <div className="flex flex-col text-xl">
+          <div className="text-xl">
+            My name is Victor Boynton, a recent graduate from Front Range
+            Community College. I recieved an Associates of Applied Science in
+            Programming in January of 2024. I have a love for all things
+            software, with a special interest in web development.
+          </div>
+          <div className="block border-l-2 border-red-500 p-3 ml-5 my-5">
+            <q className=" italic">Boy-howdy, do I love web development!</q>
+            <p className="text-sm">-Selected Quotes of Victor Boynton, 2023</p>
+          </div>
+          <div>
+            My greatest strength would be my ability to learn very quickly; my
+            greatest weakness is a lack of an artistic eye.
+          </div>
+        </div>
+      </div>
+    </main>
+  );
 }

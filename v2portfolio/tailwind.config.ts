@@ -16,6 +16,10 @@ const config: Config = {
 			animation: {
 				burgerRotate: "rotateBurger 1s linear",
 			},
+			fontFamily:{
+				'robotoMono':["'Roboto Mono'"],
+				'robotoSlab':["'Roboto Slab'"],
+			}
 		},
 	},
 	plugins: [],
