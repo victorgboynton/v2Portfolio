@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar } from "./Navbar";
 import me from "/public/picOfMe.jpg";
 import Image from "next/image";
-
+const b = `pb-5 pt-10`;
 const hardSkills = [
   { id: 1, name: "HTML/CSS" },
   { id: 2, name: "JavaScript" },
@@ -52,14 +52,16 @@ export default function Home() {
         />
       </div>
       <div className="h-[100vh] bg-[#dfdfdf]">
-        <div className="text-3xl">What I know:</div>
+        <div className="text-3xl text-center underline my-[5vh]">
+          What I know
+        </div>
         <div className="flex flex-col">
           <div>Hard Skills: </div>
           <div className="flex flex-row flex-wrap">
             {hardSkills.map((hardSkill: skill) => (
               <p
                 key={hardSkill.id}
-                className="border-2 font-robotoMono border-purple-950 p-1 m-1 bg-purple-200 rounded-[2.5em]"
+                className="border-2 font-robotoMono border-purple-950 p-1 m-1 bg-purple-300 rounded-[2.5em]"
               >
                 {hardSkill.name}
               </p>
@@ -72,7 +74,7 @@ export default function Home() {
             {softSkills.map((softSkill: skill) => (
               <p
                 key={softSkill.id}
-                className="border-2 border-purple-950 p-1 m-1 bg-purple-200 rounded-[2.5em]"
+                className="border-2 border-purple-950 p-1 m-1 bg-purple-300 rounded-[2.5em]"
               >
                 {softSkill.name}
               </p>
@@ -80,8 +82,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="h-[100vh] bg-[#f7f7f7] w-[100vw]">
-        <div className="text-center text-3xl underline mb-1">Who am I?</div>
+      <div className="h-[100vh] bg-[#f7f7f7]">
+        <div className={`text-center text-3xl underline ${b}`}>Who am I?</div>
         <div className="flex flex-col text-xl">
           <div className="text-xl">
             My name is Victor Boynton, a recent graduate from Front Range
@@ -89,16 +91,27 @@ export default function Home() {
             Programming in January of 2024. I have a love for all things
             software, with a special interest in web development.
           </div>
-          <div className="block border-l-2 border-red-500 p-3 ml-5 my-5">
-            <q className=" italic">Boy-howdy, do I love web development!</q>
-            <p className="text-sm">-Selected Quotes of Victor Boynton, 2023</p>
-          </div>
+          <QuoteBlock borderColor="border-red-500">
+            Boy-howdy, I do love web development!
+          </QuoteBlock>
           <div>
-            My greatest strength would be my ability to learn very quickly; my
+            My greatest strength is my ability to learn very quickly; my
             greatest weakness is a lack of an artistic eye.
           </div>
         </div>
       </div>
     </main>
+  );
+}
+type quote = {
+  children: string;
+  borderColor: string;
+};
+function QuoteBlock({ children, borderColor }: quote) {
+  return (
+    <div className={`block border-l-2 ${borderColor} p-3 ml-5 my-5`}>
+      <q className=" italic">{children}</q>
+      <p className="text-[15px] font-robotoSlab float-right">-Victor Boynton</p>
+    </div>
   );
 }
