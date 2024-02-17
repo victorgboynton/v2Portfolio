@@ -32,11 +32,11 @@ export function Navbar() {
 
 	return (
 		<header
-			className={`fixed top-0 w-full ${
+			className={`fixed top-0 w-full z-50 ${
 				showNav ? "translate-y-0" : "-translate-y-full"
 			} transition-transform duration-300 ease-in-out`}
 		>
-			<div className="flex flex-row justify-between sm:h-[5vh] sm:px-5 bg-purple-950 items-center z-50;">
+			<div className="relative flex flex-row justify-between sm:h-[5vh] sm:px-5 bg-purple-950 items-center z-50;">
 				{isNavOpen ? <p></p> : <h1 className="text-white">Victor Boynton</h1>}
 				<button className="sm:hidden" onClick={handleSetIsNavOpen}>
 					{isNavOpen ? (

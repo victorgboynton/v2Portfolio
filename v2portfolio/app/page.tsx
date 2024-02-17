@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useRef, useState, useEffect, ReactNode } from "react";
 import { Navbar } from "./Navbar";
 import me from "/public/picOfMe.jpg";
 import Image from "next/image";
@@ -33,14 +34,14 @@ type skill = {
 export default function Home() {
 	return (
 		<main className="flex flex-col font-robotoSlab">
-			<div className="h-[94vh] mt-[2vh] sm:mt-[5vh] bg-gradient-to-b from-purple-950 to-fuchsia-950 flex flex-col sm:flex-row items-center xl:px-10">
-				<h1 className=" text-white text-[50px] break-words animate-[slide-in_2s]">
-					Front-end Web Development,{" "}
+			<div className="h-[94vh] mt-[2vh] sm:mt-[5vh] bg-gradient-to-b sm:px-10 from-purple-950 to-fuchsia-950 flex flex-col lg:flex-row justify-center md:items-center">
+				<h1 className=" text-white text-[40px] md:text-[45px] lg:text-[50px] xl:text-[70px] break-words flex flex-col animate-[slide-in_2s,fade-in_2s]">
+					Software Development,{" "}
 					<span className="hover:text-green-500 animate-[fade-in_.1s_2.5s_forwards] italic opacity-0">
 						Done Right
 					</span>
 				</h1>
-				<div className="flex flex-col">
+				<div className="flex flex-col opacity-0 hover:opacity-[1]">
 					<h1>Hopeful Humans</h1>
 					<h1>CookSuccess</h1>
 					<h1>Blackjack Attack</h1>
@@ -55,19 +56,24 @@ export default function Home() {
 					Through this website, I aim to provide a glimpse into my skill set and
 					what I am capable of achieving.
 				</div>
-				<Image
-					src={me}
-					alt="Picture of Me"
-					height={300}
-					width={600}
-					className="sm:h-[800px] border-2 border-black my-5"
-				/>
+				<ScrollAnimation
+					inAnimation="animate-[fade-in_1s_forwards]"
+					outAnimation="animate-[fade-out_2s]"
+				>
+					<Image
+						src={me}
+						alt="Picture of Me"
+						height={300}
+						width={600}
+						className="sm:h-[800px] border-2 border-black my-5"
+					/>
+				</ScrollAnimation>
 			</div>
 			<div className="h-[100vh] sm:h-auto bg-[#dfdfdf]">
 				<div className="text-3xl text-center underline my-[5vh]">
 					What I know
 				</div>
-				<div className="flex flex-col">
+				<div className={`flex flex-col`}>
 					<h2 className="text-xl font-bold">Hard Skills: </h2>
 					<div className="flex flex-row flex-wrap">
 						{hardSkills.map((hardSkill: skill) => (
@@ -103,7 +109,7 @@ export default function Home() {
 						Programming in January of 2024. I have a love for all things
 						software, with a special interest in web development.
 					</div>
-					<QuoteBlock borderColor="border-red-500">
+					<QuoteBlock borderColor="border-red-500" author="Victor Boynton">
 						Boy-howdy, I do love web development!
 					</QuoteBlock>
 					<div>
@@ -118,12 +124,58 @@ export default function Home() {
 type quote = {
 	children: string;
 	borderColor: string;
+	author: string;
 };
-function QuoteBlock({ children, borderColor }: quote) {
+type ScrollAnimationProps = {
+	children: ReactNode;
+	inAnimation: string;
+	outAnimation: string;
+};
+function QuoteBlock({ children, borderColor, author }: quote) {
 	return (
 		<div className={`block border-l-2 ${borderColor} p-3 ml-5 my-5`}>
 			<q className=" italic">{children}</q>
-			<p className="text-[15px] font-robotoSlab float-right">-Victor Boynton</p>
+			<p className="text-[15px] font-robotoSlab float-right">-{author}</p>
+		</div>
+	);
+}
+
+function ScrollAnimation({
+	children,
+	inAnimation,
+	outAnimation,
+}: ScrollAnimationProps) {
+	const [isVisible, setIsVisible] = useState(false);
+	const containerRef = useRef(null);
+
+	useEffect(() => {
+		const callBackFunction = (entries: any) => {
+			const [entry] = entries;
+			if (entry.isIntersecting) {
+				setIsVisible(true);
+			}
+		};
+		const options = {
+			root: null,
+			rootMargin: "100px",
+			threshold: 0.7,
+		};
+		const observer = new IntersectionObserver(callBackFunction, options);
+		if (containerRef.current) {
+			observer.observe(containerRef.current);
+		}
+		return () => {
+			if (containerRef.current) {
+				observer.unobserve(containerRef.current);
+			}
+		};
+	}, []);
+	return (
+		<div
+			ref={containerRef}
+			className={`opacity-0 ${isVisible ? inAnimation : outAnimation}`}
+		>
+			{children}
 		</div>
 	);
 }

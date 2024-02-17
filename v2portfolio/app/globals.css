@@ -37,6 +37,15 @@ header.hidden {
 	}
 }
 
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
 @keyframes slide-in {
 	0% {
 		transform: translateX(-100%);
@@ -44,4 +53,15 @@ header.hidden {
 	100% {
 		transform: translateX(0);
 	}
+}
+@keyframes slide-in-right {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+.test {
+	animation-timeline: scroll();
 }
