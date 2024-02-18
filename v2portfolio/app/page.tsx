@@ -154,7 +154,7 @@ function BlinkDescriptor() {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setPhraseIndex((prevIndex) => (prevIndex + 1) % descriptor.length);
-		}, 3500);
+		}, 4000);
 		return () => clearInterval(interval);
 	}, []);
 
@@ -165,7 +165,7 @@ function BlinkDescriptor() {
 		<div>
 			<p
 				key={phraseIndex}
-				className="opacity-0 animate-[fade-in_1.5s_forwards,fade-out_1s_1.5s_forwards]"
+				className="opacity-0 animate-[fade-in_1.5s_forwards,fade-out_1s_3s_forwards]"
 			>
 				{currentPhrase}
 			</p>
