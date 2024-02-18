@@ -6,66 +6,66 @@ import Image from "next/image";
 import Link from "next/link";
 const b = `pb-5 pt-10`;
 const hardSkills = [
-  { id: 1, name: "HTML/CSS" },
-  { id: 2, name: "JavaScript" },
-  { id: 3, name: "React" },
-  { id: 4, name: "Python" },
-  { id: 5, name: "C#" },
-  { id: 6, name: "C++" },
-  { id: 7, name: "MongoDB" },
-  { id: 8, name: "SQL" },
+	{ id: 1, name: "HTML/CSS" },
+	{ id: 2, name: "JavaScript" },
+	{ id: 3, name: "React" },
+	{ id: 4, name: "Python" },
+	{ id: 5, name: "C#" },
+	{ id: 6, name: "C++" },
+	{ id: 7, name: "MongoDB" },
+	{ id: 8, name: "SQL" },
 ];
 const softSkills = [
-  { id: 1, name: "Communication" },
-  { id: 2, name: "Teamwork" },
-  { id: 3, name: "Problem-solving" },
-  { id: 4, name: "Leadership" },
-  { id: 5, name: "Adaptability" },
-  { id: 6, name: "Creativity" },
-  { id: 7, name: "Work Ethic" },
-  { id: 8, name: "Interpersonal Skills" },
-  { id: 9, name: "Time Management" },
-  { id: 10, name: "EQ" },
+	{ id: 1, name: "Communication" },
+	{ id: 2, name: "Teamwork" },
+	{ id: 3, name: "Problem-solving" },
+	{ id: 4, name: "Leadership" },
+	{ id: 5, name: "Adaptability" },
+	{ id: 6, name: "Creativity" },
+	{ id: 7, name: "Work Ethic" },
+	{ id: 8, name: "Interpersonal Skills" },
+	{ id: 9, name: "Time Management" },
+	{ id: 10, name: "EQ" },
 ];
 type skill = {
-  id: number;
-  name: string;
+	id: number;
+	name: string;
 };
 export default function Home() {
-  return (
-    <main className="flex flex-col font-robotoSlab">
-      <div className="h-[95vh] mt-[2vh] sm:mt-[5vh] bg-gradient-to-b px-[5vw] sm:px-10 from-[#1a032b] to-[#330336] flex flex-col  justify-center md:items-center">
-        <h1 className=" text-white text-[40px] md:text-[45px] lg:text-[50px] xl:text-[70px] break-words flex flex-col animate-[slide-in_1s,fade-in_1s]">
-          Software Development,{" "}
-          <span className="animate-[fade-in_1s_1s_forwards] opacity-0">
-            <BlinkDescriptor />
-          </span>{" "}
-          <span className=" animate-[fade-in_1s_1s_forwards] text-[30px] italic opacity-0">
-            by Victor Boynton
-          </span>
-        </h1>
-        <div className="flex flex-col md:flex-row w-[90vw] md:w-[70vw] justify-between md:items-center space-y-4 mx-auto mt-20">
-          <Link
-            href="/ProjectsPage"
-            className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in_1s_1.5s,fade-in_1.5s_1.5s_forwards]"
-          >
-            My Projects
-          </Link>
-          <Link
-            href="/About"
-            className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in-right_1s_2s,fade-in_1.5s_2s_forwards]"
-          >
-            Learn About Me
-          </Link>
-          <Link
-            href="/Contact"
-            className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in_1s_2.5s,fade-in_1.5s_2.5s_forwards]"
-          >
-            Contact Me
-          </Link>
-        </div>
-      </div>
-      {/* <div className=" px-[5vw] bg-[#f7f7f7] text-black pt-[10vh] block sm:flex sm:flex-col md:flex-row text-xl">
+	return (
+		<main className="flex flex-col font-robotoSlab">
+			<div className="h-[95vh] mt-[2vh] sm:mt-[5vh] bg-gradient-to-b px-[5vw] sm:px-10 from-[#1a032b] to-[#330336] flex flex-col  justify-center md:items-center">
+				<h1 className=" text-white text-[40px] md:text-[45px] lg:text-[50px] xl:text-[70px] break-words flex flex-col animate-[slide-in_1s,fade-in_1s]">
+					Software Development,{" "}
+					<span className="animate-[fade-in_1s_1s_forwards] text-[#72EF16] opacity-0">
+						<BlinkDescriptor />
+					</span>{" "}
+					<span className=" animate-[fade-in_1s_1s_forwards] text-[30px] italic opacity-0">
+						by Victor Boynton
+					</span>
+				</h1>
+				<div className="flex flex-col md:flex-row w-[90vw] md:w-[70vw] justify-between md:items-center space-y-4 mx-auto mt-20">
+					<Link
+						href="/ProjectsPage"
+						className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in_1s_1.5s,fade-in_1.5s_1.5s_forwards]"
+					>
+						My Projects
+					</Link>
+					<Link
+						href="/About"
+						className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in-right_1s_2s,fade-in_1.5s_2s_forwards]"
+					>
+						Learn About Me
+					</Link>
+					<Link
+						href="/Contact"
+						className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in_1s_2.5s,fade-in_1.5s_2.5s_forwards]"
+					>
+						Contact Me
+					</Link>
+				</div>
+			</div>
+			{/* <div className=" px-[5vw] bg-[#f7f7f7] text-black pt-[10vh] block sm:flex sm:flex-col md:flex-row text-xl">
         <div className="text-center underline text-2xl mb-1">
           Why I made this:
         </div>
@@ -137,92 +137,98 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-    </main>
-  );
+		</main>
+	);
 }
 function BlinkDescriptor() {
-  const descriptor = [
-    "Done Right",
-    "With Care",
-    "Done Efficiently",
-    "With Vision",
-  ];
-  const [currentPhrase, setCurrentPhrase] = useState(descriptor[0]);
-  const [phraseIndex, setPhraseIndex] = useState(0);
+	const descriptor = [
+		"Done Right.",
+		"With Care.",
+		"Done Efficiently.",
+		"With Vision.",
+		"Done Beautifully.",
+	];
+	const [currentPhrase, setCurrentPhrase] = useState(descriptor[0]);
+	const [phraseIndex, setPhraseIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPhraseIndex((prevIndex) => prevIndex + (1 % descriptor.length));
-    }, 1000);
-    return clearInterval(interval);
-  }, []);
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setPhraseIndex((prevIndex) => (prevIndex + 1) % descriptor.length);
+		}, 3500);
+		return () => clearInterval(interval);
+	}, []);
 
-  useEffect(() => {
-    setCurrentPhrase(descriptor[phraseIndex]);
-  }, [phraseIndex]);
-  return (
-    <div>
-      <p>{currentPhrase}</p>
-    </div>
-  );
+	useEffect(() => {
+		setCurrentPhrase(descriptor[phraseIndex]);
+	}, [phraseIndex]);
+	return (
+		<div>
+			<p
+				key={phraseIndex}
+				className="opacity-0 animate-[fade-in_1.5s_forwards,fade-out_1s_1.5s_forwards]"
+			>
+				{currentPhrase}
+			</p>
+		</div>
+	);
 }
 type quote = {
-  children: string;
-  borderColor: string;
-  author: string;
+	children: string;
+	borderColor: string;
+	author: string;
 };
 type ScrollAnimationProps = {
-  children: ReactNode;
-  inAnimation: string;
-  outAnimation: string;
+	children: ReactNode;
+	inAnimation: string;
+	outAnimation: string;
 };
 function QuoteBlock({ children, borderColor, author }: quote) {
-  return (
-    <div className={`block border-l-2 ${borderColor} p-3 ml-5 my-5`}>
-      <q className=" italic">{children}</q>
-      <p className="text-[15px] font-robotoSlab float-right">-{author}</p>
-    </div>
-  );
+	return (
+		<div className={`block border-l-2 ${borderColor} p-3 ml-5 my-5`}>
+			<q className=" italic">{children}</q>
+			<p className="text-[15px] font-robotoSlab float-right">-{author}</p>
+		</div>
+	);
 }
 
 function ScrollAnimation({
-  children,
-  inAnimation,
-  outAnimation,
+	children,
+	inAnimation,
+	outAnimation,
 }: ScrollAnimationProps) {
-  const [isVisible, setIsVisible] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+	const [isVisible, setIsVisible] = useState(false);
+	const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // const callBackFunction = (entries: HTMLDivElement) => {
-    const callBackFunction = (entries: IntersectionObserverEntry[]) => {
-      const [entry] = entries;
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-      }
-    };
-    const options = {
-      root: null,
-      rootMargin: "100px",
-      threshold: 0.7,
-    };
-    const observer = new IntersectionObserver(callBackFunction, options);
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-    };
-  }, []);
+	useEffect(() => {
+		// const callBackFunction = (entries: HTMLDivElement) => {
+		const callBackFunction = (entries: IntersectionObserverEntry[]) => {
+			const [entry] = entries;
+			if (entry.isIntersecting) {
+				setIsVisible(true);
+			}
+		};
+		const options = {
+			root: null,
+			rootMargin: "100px",
+			threshold: 0.7,
+		};
+		const observer = new IntersectionObserver(callBackFunction, options);
+		if (containerRef.current) {
+			observer.observe(containerRef.current);
+		}
+		return () => {
+			if (containerRef.current) {
+				observer.unobserve(containerRef.current);
+			}
+		};
+	}, []);
 
-  return (
-    <div
-      ref={containerRef}
-      className={`opacity-0 ${isVisible ? inAnimation : outAnimation}`}
-    >
-      {children}
-    </div>
-  );
+	return (
+		<div
+			ref={containerRef}
+			className={`opacity-0 ${isVisible ? inAnimation : outAnimation}`}
+		>
+			{children}
+		</div>
+	);
 }

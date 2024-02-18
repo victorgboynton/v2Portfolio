@@ -65,17 +65,17 @@ header.hidden {
 .test {
 	animation-timeline: scroll();
 }
-@keyframes text-test{
-	0%{
+@keyframes text-test {
+	0% {
 		background-color: white;
-		transform:scale(0%)
+		transform: scale(0%);
 	}
-	50%{
-		background-color:green;
-		transform:scale(100%)
+	50% {
+		background-color: green;
+		transform: scale(100%);
 	}
-	100%{
+	100% {
 		background-color: white;
-		transform:scale(0%)
+		transform: scale(0%);
 	}
 }
