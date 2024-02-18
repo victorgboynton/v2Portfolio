@@ -44,19 +44,19 @@ export default function Home() {
         <div className="flex flex-col md:flex-row w-[90vw] md:w-[70vw] justify-between md:items-center space-y-4 mx-auto mt-20">
           <Link
             href="/ProjectsPage"
-            className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto animate-[slide-in_1s_3s,fade-in_1.5s_3s_forwards]"
+            className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in_1s_3s,fade-in_1.5s_3s_forwards]"
           >
             My Projects
           </Link>
           <Link
             href="/About"
-            className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in-right_1s_3.5s,fade-in_1.5s_3.5s_forwards]"
+            className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full rounded-full animate-[slide-in-right_1s_3.5s,fade-in_1.5s_3.5s_forwards]"
           >
             Learn About Me
           </Link>
           <Link
             href="/Contact"
-            className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in_1s_4s,fade-in_1.5s_4s_forwards]"
+            className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full rounded-full animate-[slide-in_1s_4s,fade-in_1.5s_4s_forwards]"
           >
             Contact Me
           </Link>
@@ -162,10 +162,11 @@ function ScrollAnimation({
   outAnimation,
 }: ScrollAnimationProps) {
   const [isVisible, setIsVisible] = useState(false);
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const callBackFunction = (entries: any) => {
+    // const callBackFunction = (entries: HTMLDivElement) => {
+    const callBackFunction = (entries: IntersectionObserverEntry[]) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
         setIsVisible(true);
@@ -186,6 +187,7 @@ function ScrollAnimation({
       }
     };
   }, []);
+  
   return (
     <div
       ref={containerRef}
