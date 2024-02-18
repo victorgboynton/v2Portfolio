@@ -33,36 +33,36 @@ type skill = {
 };
 export default function Home() {
   return (
-    <main className="flex flex-col w-[100vw] font-robotoSlab">
-      <div className="h-[94vh] mt-[2vh] sm:mt-[5vh] bg-gradient-to-b px-[5vw] sm:px-10 from-purple-950 to-fuchsia-950 flex flex-col  justify-center md:items-center">
+    <main className="flex flex-col font-robotoSlab">
+      <div className="h-[95vh] mt-[2vh] sm:mt-[5vh] bg-gradient-to-b px-[5vw] sm:px-10 from-[#1a032b] to-[#330336] flex flex-col  justify-center md:items-center">
         <h1 className=" text-white text-[40px] md:text-[45px] lg:text-[50px] xl:text-[70px] break-words flex flex-col animate-[slide-in_2s,fade-in_2s]">
           Software Development:{" "}
-          <span className=" md:w-[400px] animate-[fade-in_.1s_2.5s_forwards] italic opacity-0">
+          <span className=" md:w-[400px] animate-[fade-in_1s_2s_forwards] italic opacity-0">
             Done Right
           </span>
         </h1>
         <div className="flex flex-col md:flex-row w-[90vw] md:w-[70vw] justify-between md:items-center space-y-4 mx-auto mt-20">
           <Link
             href="/ProjectsPage"
-            className="text-white bg-purple-800 border-2 opacity-0 border-white p-5 text-3xl rounded-full animate-[slide-in_1s_3s,fade-in_1.5s_3s_forwards]"
+            className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto animate-[slide-in_1s_3s,fade-in_1.5s_3s_forwards]"
           >
             My Projects
           </Link>
           <Link
             href="/About"
-            className="text-white bg-purple-800 border-2 opacity-0 border-white p-5 text-3xl rounded-full animate-[slide-in-right_1s_3.5s,fade-in_1.5s_3.5s_forwards]"
+            className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in-right_1s_3.5s,fade-in_1.5s_3.5s_forwards]"
           >
             Learn About Me
           </Link>
           <Link
             href="/Contact"
-            className="text-white bg-purple-800 border-2 opacity-0 border-white p-5 text-3xl rounded-full animate-[slide-in_1s_4s,fade-in_1.5s_4s_forwards]"
+            className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in_1s_4s,fade-in_1.5s_4s_forwards]"
           >
             Contact Me
           </Link>
         </div>
       </div>
-      <div className=" px-[5vw] bg-[#f7f7f7] text-black pt-[10vh] block sm:flex sm:flex-col md:flex-row text-xl">
+      {/* <div className=" px-[5vw] bg-[#f7f7f7] text-black pt-[10vh] block sm:flex sm:flex-col md:flex-row text-xl">
         <div className="text-center underline text-2xl mb-1">
           Why I made this:
         </div>
@@ -133,7 +133,7 @@ export default function Home() {
             greatest weakness is a lack of an artistic eye.
           </div>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
