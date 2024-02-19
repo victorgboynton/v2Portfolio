@@ -1,71 +1,119 @@
 "use client";
-import React, { useRef, useState, useEffect, ReactNode } from "react";
+import React from "react";
 import { Navbar } from "./Navbar";
 import me from "/public/picOfMe.jpg";
 import Image from "next/image";
 import Link from "next/link";
+import { BlinkDescriptor } from "./BlinkDescriptor";
 const b = `pb-5 pt-10`;
 const hardSkills = [
-	{ id: 1, name: "HTML/CSS" },
-	{ id: 2, name: "JavaScript" },
-	{ id: 3, name: "React" },
-	{ id: 4, name: "Python" },
-	{ id: 5, name: "C#" },
-	{ id: 6, name: "C++" },
-	{ id: 7, name: "MongoDB" },
-	{ id: 8, name: "SQL" },
+  { id: 1, name: "HTML/CSS" },
+  { id: 2, name: "JavaScript" },
+  { id: 3, name: "React" },
+  { id: 4, name: "Python" },
+  { id: 5, name: "C#" },
+  { id: 6, name: "C++" },
+  { id: 7, name: "MongoDB" },
+  { id: 8, name: "SQL" },
+  { id: 9, name: "Technical Writing" },
 ];
 const softSkills = [
-	{ id: 1, name: "Communication" },
-	{ id: 2, name: "Teamwork" },
-	{ id: 3, name: "Problem-solving" },
-	{ id: 4, name: "Leadership" },
-	{ id: 5, name: "Adaptability" },
-	{ id: 6, name: "Creativity" },
-	{ id: 7, name: "Work Ethic" },
-	{ id: 8, name: "Interpersonal Skills" },
-	{ id: 9, name: "Time Management" },
-	{ id: 10, name: "EQ" },
+  { id: 1, name: "Communication" },
+  { id: 2, name: "Teamwork" },
+  { id: 3, name: "Problem-solving" },
+  { id: 4, name: "Leadership" },
+  { id: 5, name: "Adaptability" },
+  { id: 6, name: "Creativity" },
+  { id: 7, name: "Work Ethic" },
+  { id: 8, name: "Interpersonal Skills" },
+  { id: 9, name: "Time Management" },
+  { id: 10, name: "EQ" },
 ];
-type skill = {
-	id: number;
-	name: string;
+type Skill = {
+  id: number;
+  name: string;
+};
+type SkillCardProps = {
+  MapName: string;
+  SkillsMap: Skill[];
 };
 export default function Home() {
-	return (
-		<main className="flex flex-col font-robotoSlab">
-			<div className="h-[95vh] mt-[2vh] sm:mt-[5vh] bg-gradient-to-b px-[5vw] sm:px-10 from-[#1a032b] to-[#330336] flex flex-col  justify-center md:items-center">
-				<h1 className=" text-white text-[40px] md:text-[45px] lg:text-[50px] xl:text-[70px] break-words flex flex-col animate-[slide-in_1s,fade-in_1s]">
-					Software Development,{" "}
-					<span className="animate-[fade-in_1s_1s_forwards] text-[#72EF16] opacity-0">
-						<BlinkDescriptor />
-					</span>{" "}
-					<span className=" animate-[fade-in_1s_1s_forwards] text-[30px] italic opacity-0">
-						by Victor Boynton
-					</span>
-				</h1>
-				<div className="flex flex-col md:flex-row w-[90vw] md:w-[70vw] justify-between md:items-center space-y-4 mx-auto mt-20">
-					<Link
-						href="/ProjectsPage"
-						className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in_1s_1.5s,fade-in_1.5s_1.5s_forwards]"
-					>
-						My Projects
-					</Link>
-					<Link
-						href="/About"
-						className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in-right_1s_2s,fade-in_1.5s_2s_forwards]"
-					>
-						Learn About Me
-					</Link>
-					<Link
-						href="/Contact"
-						className="text-white bg-purple-900 border-2 opacity-0 border-white p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in_1s_2.5s,fade-in_1.5s_2.5s_forwards]"
-					>
-						Contact Me
-					</Link>
-				</div>
-			</div>
-			{/* <div className=" px-[5vw] bg-[#f7f7f7] text-black pt-[10vh] block sm:flex sm:flex-col md:flex-row text-xl">
+  return (
+    <main className="flex flex-col font-robotoSlab">
+      <div className="h-[98vh] mt-[2vh] sm:mt-[5vh] bg-gradient-to-b px-[5vw] sm:px-10 from-[#1a032b] to-[#330336] flex flex-col  justify-center md:items-center">
+        <h1 className=" text-white text-[40px] md:text-[45px] lg:text-[50px] lg:leading-[90px] xl:text-[70px] break-words flex flex-col animate-[slide-in_1s,fade-in_1s]">
+          Software Development,{" "}
+          <span className="animate-[fade-in_1s_1s_forwards] text-[#5dc213] opacity-0">
+            <BlinkDescriptor />
+          </span>{" "}
+          <span className="relative animate-[fade-in_1s_1.5s_forwards] text-[30px] right-0 italic opacity-0">
+            by Victor Boynton
+          </span>
+        </h1>
+        <div className="flex flex-col md:flex-row w-[90vw] md:w-[70vw] justify-between md:items-center space-y-4 mx-auto mt-20">
+          <Link
+            href="/ProjectsPage"
+            className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 mt-4  p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in_1s_1.5s,fade-in_1.5s_1.5s_forwards]"
+          >
+            My Projects
+          </Link>
+          <Link
+            href="/About"
+            className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in-right_1s_2s,fade-in_1.5s_2s_forwards]"
+          >
+            Learn About Me
+          </Link>
+          <Link
+            href="/Contact"
+            className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in_1s_2.5s,fade-in_1.5s_2.5s_forwards]"
+          >
+            Contact Me
+          </Link>
+        </div>
+      </div>
+      <div className="h-[30vh] bg-gradient-to-b from-[#330336] to-gray-700"></div>
+      <div className="bg-gray-700">
+        <div className="text-white text-xl py-20 w-[90vw] mx-auto flex flex-col sm:flex-row justify-between">
+          <div className="sm:w-[60vw] mx-auto">
+            <h1 className="text-center text-2xl font-bold pb-5">
+              Welcome! I'm Victor Boynton
+            </h1>
+            <p>
+              As a recent graduate in the field of development, my professional
+              journey is just beginning. While I may not yet have extensive
+              industry experience, I bring a portfolio rich with diverse
+              projects and freelance ventures.
+            </p>
+            <br />
+            <p>
+              Consider this website your personal gateway to my world of work,
+              all neatly organized and beautifully displayed for your viewing
+              pleasure.
+            </p>
+          </div>
+          <div className="min-h-80 min-w-80 rounded-full relative border-2">
+            <Image
+              src="/picOfMe.jpg"
+              alt="Picture of Victor Boynton in a suit and tie"
+              fill
+              className="rounded-full object-cover object-left-top relative border-1"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="h-[20vh] bg-gradient-to-b to-[#330336] from-gray-700"></div>
+      <div className="bg-[#330336] text-white text-xl py-20">
+        <div className="flex flex-col w-[90vw] mx-auto">
+          <h1 className="text-center text-3xl font-bold mb-10">
+            What do I know?
+          </h1>
+          <div className="flex flex-col sm:flex-row justify-center sm:space-x-20 mx-auto">
+            <SkillsCard SkillsMap={hardSkills} MapName="My Hard Skills" />
+            <SkillsCard SkillsMap={softSkills} MapName="My Soft Skills" />
+          </div>
+        </div>
+      </div>
+      {/* <div className=" px-[5vw] bg-[#f7f7f7] text-black pt-[10vh] block sm:flex sm:flex-col md:flex-row text-xl">
         <div className="text-center underline text-2xl mb-1">
           Why I made this:
         </div>
@@ -137,98 +185,24 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-		</main>
-	);
-}
-function BlinkDescriptor() {
-	const descriptor = [
-		"Done Right.",
-		"With Care.",
-		"Done Efficiently.",
-		"With Vision.",
-		"Done Beautifully.",
-	];
-	const [currentPhrase, setCurrentPhrase] = useState(descriptor[0]);
-	const [phraseIndex, setPhraseIndex] = useState(0);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setPhraseIndex((prevIndex) => (prevIndex + 1) % descriptor.length);
-		}, 4000);
-		return () => clearInterval(interval);
-	}, []);
-
-	useEffect(() => {
-		setCurrentPhrase(descriptor[phraseIndex]);
-	}, [phraseIndex]);
-	return (
-		<div>
-			<p
-				key={phraseIndex}
-				className="opacity-0 animate-[fade-in_1.5s_forwards,fade-out_1s_3s_forwards]"
-			>
-				{currentPhrase}
-			</p>
-		</div>
-	);
-}
-type quote = {
-	children: string;
-	borderColor: string;
-	author: string;
-};
-type ScrollAnimationProps = {
-	children: ReactNode;
-	inAnimation: string;
-	outAnimation: string;
-};
-function QuoteBlock({ children, borderColor, author }: quote) {
-	return (
-		<div className={`block border-l-2 ${borderColor} p-3 ml-5 my-5`}>
-			<q className=" italic">{children}</q>
-			<p className="text-[15px] font-robotoSlab float-right">-{author}</p>
-		</div>
-	);
+    </main>
+  );
 }
 
-function ScrollAnimation({
-	children,
-	inAnimation,
-	outAnimation,
-}: ScrollAnimationProps) {
-	const [isVisible, setIsVisible] = useState(false);
-	const containerRef = useRef<HTMLDivElement>(null);
-
-	useEffect(() => {
-		// const callBackFunction = (entries: HTMLDivElement) => {
-		const callBackFunction = (entries: IntersectionObserverEntry[]) => {
-			const [entry] = entries;
-			if (entry.isIntersecting) {
-				setIsVisible(true);
-			}
-		};
-		const options = {
-			root: null,
-			rootMargin: "100px",
-			threshold: 0.7,
-		};
-		const observer = new IntersectionObserver(callBackFunction, options);
-		if (containerRef.current) {
-			observer.observe(containerRef.current);
-		}
-		return () => {
-			if (containerRef.current) {
-				observer.unobserve(containerRef.current);
-			}
-		};
-	}, []);
-
-	return (
-		<div
-			ref={containerRef}
-			className={`opacity-0 ${isVisible ? inAnimation : outAnimation}`}
-		>
-			{children}
-		</div>
-	);
+function SkillsCard({ SkillsMap, MapName }: SkillCardProps) {
+  return (
+    <div className="sm:w-[35vw] bg-gray-400/25 p-4 rounded-md">
+      <h2 className="text-center text-2xl border-b-2">{MapName}:</h2>
+      <div className="flex flex-row flex-wrap">
+        {SkillsMap.map((Skill: Skill) => (
+          <p
+            key={Skill.id}
+            className="border-2 font-robotoMono border-purple-950 p-1 m-1 bg-purple-700 rounded-[2.5em]"
+          >
+            {Skill.name}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
 }
