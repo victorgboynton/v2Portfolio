@@ -5,38 +5,9 @@ import me from "/public/picOfMe.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import { BlinkDescriptor } from "./BlinkDescriptor";
+import { SkillsCard, softSkills, hardSkills } from "./SkillsCard";
 const b = `pb-5 pt-10`;
-const hardSkills = [
-  { id: 1, name: "HTML/CSS" },
-  { id: 2, name: "JavaScript" },
-  { id: 3, name: "React" },
-  { id: 4, name: "Python" },
-  { id: 5, name: "C#" },
-  { id: 6, name: "C++" },
-  { id: 7, name: "MongoDB" },
-  { id: 8, name: "SQL" },
-  { id: 9, name: "Technical Writing" },
-];
-const softSkills = [
-  { id: 1, name: "Communication" },
-  { id: 2, name: "Teamwork" },
-  { id: 3, name: "Problem-solving" },
-  { id: 4, name: "Leadership" },
-  { id: 5, name: "Adaptability" },
-  { id: 6, name: "Creativity" },
-  { id: 7, name: "Work Ethic" },
-  { id: 8, name: "Interpersonal Skills" },
-  { id: 9, name: "Time Management" },
-  { id: 10, name: "EQ" },
-];
-type Skill = {
-  id: number;
-  name: string;
-};
-type SkillCardProps = {
-  MapName: string;
-  SkillsMap: Skill[];
-};
+
 export default function Home() {
   return (
     <main className="flex flex-col font-robotoSlab">
@@ -50,7 +21,7 @@ export default function Home() {
             by Victor Boynton
           </span>
         </h1>
-        <div className="flex flex-col md:flex-row w-[90vw] md:w-[70vw] justify-between md:items-center space-y-4 mx-auto mt-20">
+        <nav className="flex flex-col md:flex-row w-[90vw] md:w-[70vw] justify-between md:items-center space-y-4 mx-auto mt-20">
           <Link
             href="/ProjectsPage"
             className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 mt-4  p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in_1s_1.5s,fade-in_1.5s_1.5s_forwards]"
@@ -58,7 +29,7 @@ export default function Home() {
             My Projects
           </Link>
           <Link
-            href="/About"
+            href="/#aboutMeSection"
             className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[slide-in-right_1s_2s,fade-in_1.5s_2s_forwards]"
           >
             Learn About Me
@@ -69,12 +40,12 @@ export default function Home() {
           >
             Contact Me
           </Link>
-        </div>
+        </nav>
       </div>
       <div className="h-[30vh] bg-gradient-to-b from-[#330336] to-gray-700"></div>
-      <div className="bg-gray-700">
-        <div className="text-white text-xl py-20 w-[90vw] mx-auto flex flex-col sm:flex-row justify-between">
-          <div className="sm:w-[60vw] mx-auto">
+      <div id="aboutMeSection" className="bg-gray-700">
+        <div className="text-white text-xl py-20 md:py-32 w-[90vw] mx-auto flex flex-col md:flex-row justify-between">
+          <div className="md:w-[60vw] mx-auto">
             <h1 className="text-center text-2xl font-bold pb-5">
               Welcome! I'm Victor Boynton
             </h1>
@@ -108,8 +79,8 @@ export default function Home() {
             What do I know?
           </h1>
           <div className="flex flex-col sm:flex-row justify-center sm:space-x-20 mx-auto">
-            <SkillsCard SkillsMap={hardSkills} MapName="My Hard Skills" />
             <SkillsCard SkillsMap={softSkills} MapName="My Soft Skills" />
+            <SkillsCard SkillsMap={hardSkills} MapName="My Hard Skills" />
           </div>
         </div>
       </div>
@@ -186,23 +157,5 @@ export default function Home() {
         </div>
       </div> */}
     </main>
-  );
-}
-
-function SkillsCard({ SkillsMap, MapName }: SkillCardProps) {
-  return (
-    <div className="sm:w-[35vw] bg-gray-400/25 p-4 rounded-md">
-      <h2 className="text-center text-2xl border-b-2">{MapName}:</h2>
-      <div className="flex flex-row flex-wrap">
-        {SkillsMap.map((Skill: Skill) => (
-          <p
-            key={Skill.id}
-            className="border-2 font-robotoMono border-purple-950 p-1 m-1 bg-purple-700 rounded-[2.5em]"
-          >
-            {Skill.name}
-          </p>
-        ))}
-      </div>
-    </div>
   );
 }
