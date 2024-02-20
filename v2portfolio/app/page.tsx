@@ -51,9 +51,9 @@ export default function Home() {
 			<div className="bg-gradient-to-b from-[#414344] to-[#555555]">
 				<div
 					id="aboutMeSection"
-					className=" w-[90vw] mx-auto text-white text-xl"
+					className=" w-[90vw] mx-auto flex flex-col text-white text-xl"
 				>
-					<div className="pt-20 md:pt-32 flex flex-col md:flex-row justify-between">
+					<div className="pt-20 md:pt-32 flex flex-col md:flex-row mx-auto items-center justify-between">
 						<div className="md:w-[60vw] mx-auto">
 							<h1 className="text-center text-2xl font-bold pb-5">
 								Welcome! I&apos;m Victor Boynton
@@ -124,12 +124,12 @@ export default function Home() {
 								</div>
 							</div>
 						</div>{" "}
-						<div className="w-[90vw] mx-auto">
+						<div className="w-[90vw] md:w-auto mx-auto">
 							<ScrollAnimation
 								inAnimation="animate-[slide-down_2s,fade-in_2s_forwards]"
 								outAnimation="animate-[fade-out_2s_forwards]"
 							>
-								<div className="min-h-80 w-80 resize-none rounded-full relative border-2">
+								<div className="min-h-72 w-72 resize-none rounded-full relative border-2">
 									<Image
 										src="/picOfMe.jpg"
 										alt="Picture of Victor Boynton in a suit and tie"
