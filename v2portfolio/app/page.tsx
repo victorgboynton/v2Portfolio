@@ -7,6 +7,8 @@ import Link from "next/link";
 import { BlinkDescriptor } from "./BlinkDescriptor";
 import { SkillsCard, softSkills, hardSkills } from "./SkillsCard";
 import { ScrollAnimation } from "./ScrollAnimation";
+import { Contact } from "./Contact";
+import { ProjectList } from "./ProjectList";
 const b = `pb-5 pt-10`;
 
 export default function Home() {
@@ -36,7 +38,7 @@ export default function Home() {
 						My Projects
 					</Link>
 					<Link
-						href="/Contact"
+						href="/#contact"
 						className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[fade-in_1.5s_3s_forwards]"
 					>
 						Contact Me
@@ -69,7 +71,7 @@ export default function Home() {
 							<br />
 							<div className="my-10">
 								<h2 className="text-2xl">Visit Me Elsewhere:</h2>
-								<div className="flex flex-row space-x-3">
+								<div className="flex flex-row flex-wrap justify-between sm:justify-normal sm:space-x-2">
 									<Link
 										href="https://github.com/victorgboynton"
 										target="_blank"
@@ -99,6 +101,22 @@ export default function Home() {
 												/>
 											</div>
 											<p className="ml-2">LinkedIn</p>
+										</div>
+									</Link>
+									<p>|</p>
+									<Link
+										href="https://docs.google.com/document/d/18LAL50lpS0qSegzxLI1A30z4Sh1lg9Rrlv-8cTqVDhs/edit?usp=sharing"
+										target="_blank"
+									>
+										<div className="flex flex-row hover:text-blue-600">
+											<div className="relative h-7 w-7">
+												<Image
+													src="/resumeIcon.svg"
+													alt="Icon of a piece of paper, is a link"
+													fill
+												/>
+											</div>
+											<p className="ml-2">Résumé</p>
 										</div>
 									</Link>
 								</div>
@@ -136,81 +154,15 @@ export default function Home() {
 				<ProjectList />
 			</div>
 			<div className="h-[10vh] bg-gradient-to-b to-[#555555] from-[#1a032b] via-[#3a233d]"></div>
-			<div className="bg-gradient-to-b to-[#414344] from-[#555555]">
+			<div
+				id="contact"
+				className="bg-gradient-to-b to-[#414344] from-[#555555] pt-20"
+			>
 				<div className="w-[90vw] mx-auto text-white text-xl ">
 					<h1 className="text-2xl font-bold text-center">Get Ahold of Me!</h1>
+					<Contact />
 				</div>
 			</div>
 		</main>
-	);
-}
-type ProjectPreviewProps = {
-	picture: string;
-	altText: string;
-	name: string;
-	target: string;
-};
-function ProjectPreview({
-	picture,
-	name,
-	altText,
-	target,
-}: ProjectPreviewProps) {
-	return (
-		<Link href={target}>
-			<div className="py-2 px-6 m-2 bg-green-900/20 rounded-md w-[90vw] md:w-auto">
-				<div className="relative w-[70vw] md:w-[30vw] lg:w-[25vw] h-[20vh] md:h-40 lg:h-60 mx-auto">
-					<Image
-						src={picture}
-						alt={altText}
-						fill
-						className="object-scale-down"
-					/>
-				</div>
-				<h2 className="text-center">{name}</h2>
-			</div>
-		</Link>
-	);
-}
-
-function ProjectList() {
-	return (
-		<div
-			id="projects"
-			className="bg-gradient-to-t from-[#1a032b] to-[#330336] text-white text-xl py-20"
-		>
-			<div className="flex flex-col w-[90vw] mx-auto">
-				<h1 className="text-center text-3xl font-bold mb-10">My Projects:</h1>
-				<div className="flex justify-center mx-auto">
-					{/* <div className="flex flex-col md:flex-row flex-wrap items-center mx-auto"> */}
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-						<ProjectPreview
-							picture="/CookSuccess.png"
-							altText="Picture of the CookSuccess Landing Page"
-							name="CookSuccess"
-							target="/"
-						/>
-						<ProjectPreview
-							picture="/WhackAFood.png"
-							altText="Picture of the Wack-a-Food load screen"
-							name="Whack-A-Food"
-							target="/"
-						/>
-						<ProjectPreview
-							picture="/gameForceOne.png"
-							altText="Picture of the Game Force Landing Page"
-							name="Game Force"
-							target="/"
-						/>
-						<ProjectPreview
-							picture="/hopefulHumans.png"
-							altText="Picture of the Hopeful Humans Landing Page"
-							name="Hopeful Humans"
-							target="/"
-						/>
-					</div>
-				</div>
-			</div>
-		</div>
 	);
 }

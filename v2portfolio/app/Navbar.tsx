@@ -59,10 +59,10 @@ export function Navbar() {
 				</button>
 				<div className="hidden sm:flex sm:h-[5vh] items-center">
 					<div className="flex flex-row items-center justify-between space-x-4 text-white">
-						<NavButton target={"/"}>Home</NavButton>
+						<NavButton target={"/"}>Top</NavButton>
 						<NavButton target={"/#aboutMeSection"}>About</NavButton>
 						<NavButton target={"/#projects"}>Projects</NavButton>
-						<NavButton target={"/Contact"}>Contact Me</NavButton>
+						<NavButton target={"/#contact"}>Contact Me</NavButton>
 					</div>
 				</div>
 			</div>
@@ -76,12 +76,7 @@ type navButton = {
 function NavButton(props: navButton) {
 	const pathname = usePathname();
 	return (
-		<Link
-			href={props.target}
-			className={`${
-				pathname === props.target ? "border-b-2 border-white" : ""
-			}`}
-		>
+		<Link href={props.target} className={`hover:bg-purple-700 p-1 rounded-md`}>
 			{props.children}
 		</Link>
 	);
