@@ -15,7 +15,7 @@ export function BlinkDescriptor() {
   useEffect(() => {
     const interval = setInterval(() => {
       setPhraseIndex((prevIndex) => (prevIndex + 1) % descriptor.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 

@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-import { quote } from "./QuoteBlock";
 
-function QuoteBlock({ children, borderColor, author }: quote) {
+export function QuoteBlock({ children, borderColor, author }: quote) {
   return (
     <div className={`block border-l-2 ${borderColor} p-3 ml-5 my-5`}>
       <q className=" italic">{children}</q>

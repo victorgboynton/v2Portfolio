@@ -6,7 +6,7 @@ type ScrollAnimationProps = {
   inAnimation: string;
   outAnimation: string;
 };
-function ScrollAnimation({
+export function ScrollAnimation({
   children,
   inAnimation,
   outAnimation,
@@ -30,10 +30,12 @@ function ScrollAnimation({
     const observer = new IntersectionObserver(callBackFunction, options);
     if (containerRef.current) {
       observer.observe(containerRef.current);
+      console.log("In");
     }
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current);
+        console.log("Out");
       }
     };
   }, []);
