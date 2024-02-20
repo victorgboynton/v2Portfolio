@@ -38,7 +38,9 @@ export function Contact() {
 	return (
 		<div className="flex flex-col md:flex-row justify-center">
 			<div className="space-y-3 w-[90vw] md:w-[25vw]">
-				<h1 className="text-2xl">Reasons to contact me:</h1>
+				<h1 className="text-2xl text-center sm:text-start">
+					Reasons to contact me:
+				</h1>
 				<div>
 					<h2 className="border-b-2 border-white">You want to hire me!</h2>
 					<p className="text-lg">
