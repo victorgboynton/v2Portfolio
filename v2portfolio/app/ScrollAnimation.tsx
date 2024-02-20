@@ -43,7 +43,7 @@ export function ScrollAnimation({
 	return (
 		<div
 			ref={containerRef}
-			className={`opacity-0 flex justify-center ${
+			className={`opacity-0 flex justify-center sm:justify-normal ${
 				isVisible ? inAnimation : outAnimation
 			}`}
 		>
