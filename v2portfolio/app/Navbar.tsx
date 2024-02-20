@@ -45,9 +45,9 @@ export function Navbar() {
 						>
 							<div className="flex flex-col items-center text-2xl space-y-10">
 								<NavButton target={"/"}>Home</NavButton>
-								<NavButton target={"/ProjectsPage"}>Projects</NavButton>
-								<NavButton target={"/About"}>About</NavButton>
-								<NavButton target={"/Contact"}>Contact Me</NavButton>
+								<NavButton target={"/#aboutMeSection"}>About</NavButton>
+								<NavButton target={"/#projects"}>Projects</NavButton>
+								<NavButton target={"/#contact"}>Contact Me</NavButton>
 							</div>
 							<div className="bg-gray-950 items-center py-[2vh]">
 								<button>Close</button>
