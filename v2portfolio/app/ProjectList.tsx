@@ -19,7 +19,7 @@ export function ProjectList() {
 							outAnimation=""
 						>
 							<ProjectPreview
-								picture="/CookSuccess.png"
+								picture="/CookSuccess.webp"
 								altText="Picture of the CookSuccess Landing Page"
 								name="CookSuccess"
 								target="/"
@@ -30,7 +30,7 @@ export function ProjectList() {
 							outAnimation=""
 						>
 							<ProjectPreview
-								picture="/WhackAFood.png"
+								picture="/WhackAFood.webp"
 								altText="Picture of the Wack-a-Food load screen"
 								name="Whack-A-Food"
 								target="/"
@@ -41,7 +41,7 @@ export function ProjectList() {
 							outAnimation=""
 						>
 							<ProjectPreview
-								picture="/gameForceOne.png"
+								picture="/gameForceOne.webp"
 								altText="Picture of the Game Force Landing Page"
 								name="Game Force"
 								target="/"
@@ -52,7 +52,7 @@ export function ProjectList() {
 							outAnimation=""
 						>
 							<ProjectPreview
-								picture="/hopefulHumans.png"
+								picture="/hopefulHumans.webp"
 								altText="Picture of the Hopeful Humans Landing Page"
 								name="Hopeful Humans"
 								target="/"

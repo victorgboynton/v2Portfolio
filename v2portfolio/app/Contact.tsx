@@ -103,7 +103,7 @@ export function Contact() {
 
 					<button
 						type="submit"
-						className="font-ribeye text-2xl p-2 border-2 w-32 mx-auto rounded-full border-black bg-pink-200 mt-3 font-bold"
+						className="font-ribeye text-2xl p-2 border-2 w-32 mx-auto rounded-full border-black bg-purple-900 mt-3 font-bold"
 					>
 						Send
 					</button>
