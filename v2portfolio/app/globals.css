@@ -62,6 +62,14 @@ header.hidden {
 		transform: translateX(0);
 	}
 }
+@keyframes slide-down {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
 .test {
 	animation-timeline: scroll();
 }
