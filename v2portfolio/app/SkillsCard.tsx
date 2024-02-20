@@ -39,7 +39,7 @@ export function SkillsCard({ SkillsMap, MapName }: SkillCardProps) {
 				{SkillsMap.map((Skill: Skill) => (
 					<p
 						key={Skill.id}
-						className=" font-robotoMono  py-1 px-2 m-1 bg-gray-600 rounded-[2.5em]"
+						className=" font-robotoMono  py-1 px-2 m-1 bg-purple-900 rounded-[2.5em]"
 					>
 						{Skill.name}
 					</p>
