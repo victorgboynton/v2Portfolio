@@ -15,35 +15,37 @@ export default function Home() {
 	return (
 		<main className="flex flex-col font-robotoSlab">
 			<div className="h-[98vh] pt-[2vh] sm:mt-[5vh] bg-gradient-to-b px-[5vw] sm:px-10 from-[#1a032b] to-[#330336] flex flex-col justify-center md:items-center">
-				<h1 className=" text-white text-[40px] md:text-[45px] lg:text-[50px] lg:leading-[90px] xl:text-[70px] break-words flex flex-col animate-[slide-in_1s,fade-in_1s] max-h-min">
-					Software Development,{" "}
-					<span className="animate-[fade-in_1s_1s_forwards] text-[#5dc213] opacity-0">
-						<BlinkDescriptor />
-					</span>{" "}
-					<span className="relative animate-[fade-in_1s_1.5s_forwards] text-[30px] right-0 italic opacity-0">
-						by Victor Boynton
-					</span>
-				</h1>
-				<nav className="flex flex-col md:flex-row w-[90vw] md:w-[70vw] justify-between md:items-center space-y-4 mx-auto mt-20">
-					<Link
-						href="/#aboutMeSection"
-						className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 mt-4 text-3xl sm:text-2xl md:text-3xl w-[300px] md:w-auto rounded-full animate-[fade-in_1.5s_2s_forwards]"
-					>
-						Learn More
-					</Link>
-					<Link
-						href="/#projects"
-						className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[fade-in_1.5s_2.5s_forwards]"
-					>
-						My Projects
-					</Link>
-					<Link
-						href="/#contact"
-						className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[fade-in_1.5s_3s_forwards]"
-					>
-						Contact Me
-					</Link>
-				</nav>
+				<div className="w-[90vw] mx-auto flex flex-col items-center justify-center">
+					<h1 className=" text-white mx-auto text-[40px] md:text-[45px] lg:text-[50px] lg:leading-[90px] xl:text-[70px] break-words flex flex-col animate-[slide-in_1s,fade-in_1s] max-h-min">
+						Software Development,{" "}
+						<span className="animate-[fade-in_1s_1s_forwards] text-[#5dc213] opacity-0">
+							<BlinkDescriptor />
+						</span>{" "}
+						<span className="relative animate-[fade-in_1s_1.5s_forwards] text-[30px] right-0 italic opacity-0">
+							by Victor Boynton
+						</span>
+					</h1>
+					<nav className="flex flex-col md:flex-row w-[90vw] md:w-[70vw] justify-between items-center space-y-4 mx-auto mt-20">
+						<Link
+							href="/#aboutMeSection"
+							className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 mt-4 text-3xl sm:text-2xl md:text-3xl w-[300px] md:w-auto rounded-full animate-[fade-in_1.5s_2s_forwards]"
+						>
+							Learn More
+						</Link>
+						<Link
+							href="/#projects"
+							className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[fade-in_1.5s_2.5s_forwards]"
+						>
+							My Projects
+						</Link>
+						<Link
+							href="/#contact"
+							className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[fade-in_1.5s_3s_forwards]"
+						>
+							Contact Me
+						</Link>
+					</nav>
+				</div>
 			</div>
 			<div className="h-[10vh] bg-gradient-to-b from-[#330336] to-[#414344] via-[#3a233d]"></div>
 			<div className="bg-gradient-to-b from-[#414344] to-[#555555]">
@@ -122,19 +124,21 @@ export default function Home() {
 								</div>
 							</div>
 						</div>{" "}
-						<ScrollAnimation
-							inAnimation="animate-[slide-down_2s,fade-in_2s_forwards]"
-							outAnimation="animate-[fade-out_2s_forwards]"
-						>
-							<div className="min-h-80 w-80 resize-none rounded-full relative border-2">
-								<Image
-									src="/picOfMe.jpg"
-									alt="Picture of Victor Boynton in a suit and tie"
-									fill
-									className="rounded-full object-cover object-left-top relative border-1"
-								/>
-							</div>
-						</ScrollAnimation>
+						<div className="w-[90vw] mx-auto">
+							<ScrollAnimation
+								inAnimation="animate-[slide-down_2s,fade-in_2s_forwards]"
+								outAnimation="animate-[fade-out_2s_forwards]"
+							>
+								<div className="min-h-80 w-80 resize-none rounded-full relative border-2">
+									<Image
+										src="/picOfMe.jpg"
+										alt="Picture of Victor Boynton in a suit and tie"
+										fill
+										className="rounded-full object-cover object-left-top relative border-1"
+									/>
+								</div>
+							</ScrollAnimation>
+						</div>
 					</div>
 					<div className=" text-white text-xl py-20">
 						<div className="flex flex-col w-[90vw] mx-auto">
