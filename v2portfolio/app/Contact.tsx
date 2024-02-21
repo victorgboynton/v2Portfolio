@@ -36,8 +36,8 @@ export function Contact() {
 	}
 
 	return (
-		<div className="flex flex-col md:flex-row justify-center">
-			<div className="space-y-3 w-[90vw] md:w-[25vw]">
+		<div className="flex flex-col w-[90vw] mx-auto lg:flex-row justify-center">
+			<div className="space-y-3 w-[90vw] mx-auto md:w-[70vw] lg:w-[30vw]">
 				<h1 className="text-2xl text-center sm:text-start">
 					Reasons to contact me:
 				</h1>
@@ -66,7 +66,7 @@ export function Contact() {
 			<div className="flex flex-col sm:flex-row sm:justify-center">
 				<form
 					onSubmit={handleSubmit}
-					className="flex flex-col h-[50vh] w-[80vw] sm:w-[50vw] lg:w-[30vw] xl:w-[20vw] mx-auto sm:mx-20"
+					className="flex flex-col h-[50vh] w-[80vw] sm:w-[50vw] lg:w-[30vw] mx-auto sm:mx-20"
 				>
 					<label htmlFor="name" className="font-ribeye">
 						Name:

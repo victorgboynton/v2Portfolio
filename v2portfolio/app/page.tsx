@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { ReactHTMLElement } from "react";
 import { Navbar } from "./Navbar";
 import me from "/public/picOfMe.jpg";
 import Image from "next/image";

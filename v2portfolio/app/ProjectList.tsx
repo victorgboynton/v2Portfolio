@@ -2,6 +2,7 @@
 import React from "react";
 import { ProjectPreview } from "./ProjectPreview";
 import { ScrollAnimation } from "./ScrollAnimation";
+import { ProjectDescriptionArray } from "./ProjectDescriptionArray";
 
 export function ProjectList() {
 	return (
@@ -11,7 +12,6 @@ export function ProjectList() {
 		>
 			<div className="flex flex-col w-[90vw] mx-auto ">
 				<h1 className="text-center text-3xl font-bold mb-10">My Projects:</h1>
-
 				<div className="flex justify-center mx-auto">
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 						<ScrollAnimation
@@ -22,7 +22,7 @@ export function ProjectList() {
 								picture="/CookSuccess.webp"
 								altText="Picture of the CookSuccess Landing Page"
 								name="CookSuccess"
-								target="/"
+								target={`/${ProjectDescriptionArray[0].slug}`}
 							/>
 						</ScrollAnimation>
 						<ScrollAnimation
