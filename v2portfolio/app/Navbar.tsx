@@ -59,7 +59,7 @@ export function Navbar() {
 				</button>
 				<div className="hidden sm:flex sm:h-[5vh] items-center">
 					<div className="flex flex-row items-center justify-between space-x-4 text-white">
-						<NavButton target={"/"}>Top</NavButton>
+						<NavButton target={"/"}>Home</NavButton>
 						<NavButton target={"/#aboutMeSection"}>About</NavButton>
 						<NavButton target={"/#projects"}>Projects</NavButton>
 						<NavButton target={"/#contact"}>Contact Me</NavButton>
