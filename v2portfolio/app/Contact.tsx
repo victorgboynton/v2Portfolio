@@ -9,8 +9,11 @@ export function Contact() {
 	async function handleSubmit(event: any) {
 		event.preventDefault();
 		const formData = new FormData(event.target);
-
-		formData.append("access_key", "4c447149-c5bf-4f80-92b0-40e11d7b70e8");
+		const apiKey = process.env.NEXT_PUBLIC_EMAIL_ACCESS_TOKEN;
+		if (!apiKey) {
+			throw new Error("Invalid Email Access Token");
+		}
+		formData.append("access_key", apiKey);
 
 		const object = Object.fromEntries(formData);
 		const json = JSON.stringify(object);
