@@ -162,7 +162,7 @@ export default function Home() {
         id="contact"
         className="bg-gradient-to-b to-[#414344] from-[#555555] pt-20"
       >
-        <div className="w-[90vw] mx-auto text-white text-xl ">
+        <div className="w-[90vw] mx-auto text-white text-xl mt-20 lg:h-[70vh]">
           <h1 className="text-2xl font-bold text-center">Get Ahold of Me!</h1>
           <Contact />
         </div>
