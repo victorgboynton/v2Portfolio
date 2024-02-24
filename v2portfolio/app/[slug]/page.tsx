@@ -22,12 +22,13 @@ export default function Page({ params }: { params: { slug: string } }) {
 			? "text-green-500"
 			: "text-yellow-400";
 	return (
-		<div>
+		<div className="bg-gradient-to-t from-[#1a032b] to-[#330336] min-h-[100vh] pb-20">
 			<Head>
-				<title>{project.projectName}</title>
+				<title>Project Page</title>
+				<meta name={project.projectName} content="Landing Page"></meta>
 				<meta name="next-size adjust" content="Hope this will fix it"></meta>
 			</Head>
-			<div className="bg-gradient-to-t from-[#1a032b] to-[#330336] min-h-[100vh] pb-20">
+			<div>
 				<div className="mt-20 text-white text-xl w-[90vw] mx-auto space-y-3 font-robotoSlab">
 					<div className="relative w-72 h-60 md:w-96 md:h-72 lg:w-[600px] lg:h-[300px] mx-auto">
 						<Image
