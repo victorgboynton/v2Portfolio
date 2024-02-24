@@ -10,7 +10,7 @@ export function ProjectList() {
 	return (
 		<div
 			id="projects"
-			className="bg-gradient-to-t from-[#1a032b] to-[#330336] text-white text-xl py-20 "
+			className=" bg-gradient-to-b from-[#414344] to-[#555555] text-white text-xl py-20 "
 		>
 			<div className="flex flex-col w-[90vw] mx-auto ">
 				<h1 className="text-center text-3xl font-bold mb-10">My Projects:</h1>

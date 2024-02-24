@@ -54,8 +54,8 @@ export function Contact() {
 				<div>
 					<h2 className="border-b-2 border-white">You need a hand!</h2>
 					<p className="text-lg">
-						If you are a charity seeing this website, just know that I help at
-						no cost for most non-profits.
+						I provide free software development for charities. If you are a
+						charity in need of some work, use this form below to contact me.
 					</p>
 				</div>
 				<div>
