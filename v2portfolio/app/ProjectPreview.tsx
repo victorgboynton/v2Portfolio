@@ -17,7 +17,7 @@ export function ProjectPreview({
 }: ProjectPreviewProps) {
 	return (
 		<Link href={target}>
-			<div className="py-2 px-6 m-2 bg-green-900/20 hover:bg-green-600/30 rounded-md w-[90vw] md:w-auto">
+			<div className="py-2 px-6 m-2 bg-purple-900/20 hover:bg-purple-600/30 rounded-md w-[90vw] md:w-auto">
 				<div className="relative w-[70vw] md:w-[30vw] lg:w-[25vw] h-[20vh] md:h-32 lg:h-52 mx-auto">
 					<Image
 						src={picture}
