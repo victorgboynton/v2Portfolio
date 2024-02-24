@@ -15,14 +15,6 @@ const b = `pb-5 pt-10`;
 export default function Home() {
 	return (
 		<main className="flex flex-col font-robotoSlab">
-			<Head>
-				<title>Landing Page</title>
-				<meta
-					name="Victor Boynton"
-					content="Landing Page"
-					key="portfolio victor boynton developer"
-				></meta>
-			</Head>
 			<div className="h-[98vh] pt-[2vh] sm:mt-[5vh] bg-gradient-to-b px-[5vw] sm:px-10 from-[#1a032b] to-[#330336] flex flex-col justify-center md:items-center">
 				<div className="w-[90vw] mx-auto flex flex-col items-center justify-center">
 					<div className=" text-white mx-auto text-[40px] md:text-[45px] lg:text-[50px] lg:leading-[90px] xl:text-[70px] break-words flex flex-col animate-[slide-in_1s,fade-in_1s] max-h-min">
