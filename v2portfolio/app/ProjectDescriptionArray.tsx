@@ -95,13 +95,13 @@ export const ProjectDescriptionArray: ProjectDescriptionProps[] = [
 		slug: "hopeful-humans",
 		picture: "/hopefulHumans.webp",
 		alt: "Picture of the Hopeful Humans landing page",
-		status: "Completed",
+		status: "In Progress",
 		skills: ["React", "TailwindCSS", "Nextjs", "Git"],
 		description: (
 			<div>
 				<p className="text-white">
-					This project involved creating a website for a charity named{" "}
-					<strong>&apos;Hopeful Humans&apos;</strong>. The goal was to design a
+					This project involves creating a website for a charity named{" "}
+					<strong>&apos;Hopeful Humans&apos;</strong>. The goal is to design a
 					platform that not only serves the charity&apos;s needs but also stands
 					as a testament to my skills and dedication.
 				</p>
@@ -113,11 +113,17 @@ export const ProjectDescriptionArray: ProjectDescriptionProps[] = [
 				</p>
 				<br />
 				<p>
-					This was by far my most complicated project. Everything you see on
-					this website was handcrafted by me. I used no libraries external to
-					Next.js. The one crutch I used was for the contact page, where I
+					This is by far my most complicated project. Everything you will see on
+					this website was handcrafted by me. I have used no libraries external
+					to Next.js. The one crutch I used was for the contact page, where I
 					utilized an external mail server and API to send the contact
 					information.
+				</p>
+				<br />
+				<p>
+					This website is for a client that does not want the repository to be
+					public, as they do not want the code to be exposed. I will, however,
+					link to the website once it is hosted.
 				</p>
 			</div>
 		),

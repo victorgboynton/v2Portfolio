@@ -1,4 +1,3 @@
-"use client";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -7,6 +6,11 @@ import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+	title: "Victor Boynton",
+	description: "Portfolio for Victor Boynton",
+};
+
 export default function RootLayout({
 	children,
 }: {
@@ -14,11 +18,6 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<Head>
-				<title>Landing Page</title>
-				<meta name="Victor Boynton" content="Landing Page"></meta>
-				<meta name="next-size adjust" content="Hope this will fix it"></meta>
-			</Head>
 			<body className={inter.className}>
 				<Navbar />
 				{children}
