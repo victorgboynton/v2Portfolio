@@ -20,11 +20,8 @@ export default function RootLayout({
 		<html lang="en">
 			<Head>
 				<title>Landing Page</title>
-				<meta
-					name="Victor Boynton"
-					content="Landing Page"
-					key="portfolio victor boynton developer"
-				></meta>
+				<meta name="Victor Boynton" content="Landing Page"></meta>
+				<meta name="next-size adjust" content="Hope this will fix it"></meta>
 			</Head>
 			<body className={inter.className}>
 				<Navbar />
