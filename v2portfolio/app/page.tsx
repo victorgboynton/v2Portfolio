@@ -28,17 +28,18 @@ export default function Home() {
 					</div>
 					<nav className="flex flex-col md:flex-row w-[90vw] md:w-[70vw] justify-between items-center space-y-4 mx-auto mt-20">
 						<Link
-							href="/#aboutMeSection"
-							className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 mt-4 text-3xl sm:text-2xl md:text-3xl w-[300px] md:w-auto rounded-full animate-[fade-in_1.5s_2s_forwards]"
-						>
-							Learn More
-						</Link>
-						<Link
 							href="/#projects"
-							className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[fade-in_1.5s_2.5s_forwards]"
+							className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[fade-in_1.5s_2s_forwards]"
 						>
 							My Projects
 						</Link>
+						<Link
+							href="/#aboutMeSection"
+							className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 mt-4 text-3xl sm:text-2xl md:text-3xl w-[300px] md:w-auto rounded-full animate-[fade-in_1.5s_2.5s_forwards]"
+						>
+							Learn More
+						</Link>
+
 						<Link
 							href="/#contact"
 							className="text-white bg-gray-700 hover:bg-purple-700 opacity-0 p-5 text-3xl w-[300px] md:w-auto rounded-full animate-[fade-in_1.5s_3s_forwards]"
