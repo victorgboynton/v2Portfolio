@@ -31,7 +31,7 @@ export const ProjectDescriptionArray: ProjectDescriptionProps[] = [
 		id: 2,
 		projectName: "Whack-a-Food",
 		slug: "whack-a-food",
-		githubLink: "https://github.com/victorgboynton",
+		githubLink: "https://github.com/victorgboynton/Whack-a-Food/tree/main",
 		picture: "/WhackAFood.webp",
 		alt: "Picture of the Whack-a-Food menu",
 		status: "Completed",
