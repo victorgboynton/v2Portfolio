@@ -139,9 +139,9 @@ export const ProjectDescriptionArray: ProjectDescriptionProps[] = [
     description: (
       <div>
         <p>
-          This little ditty here is for a local music group called "Rooted
-          Rhythm." This group needed a website to help them book new gigs, so I
-          stepped up to help make their dreams a reality!
+          This little ditty here is for a local music group called &ldquo;Rooted
+          Rhythm.&rdquo; This group needed a website to help them book new gigs,
+          so I stepped up to help make their dreams a reality!
         </p>
         <br />
         <p>
